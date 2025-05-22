@@ -4,3 +4,6 @@
 #ls -la s3/bashscripts/
 
 
+# check for bucket name
+
+if []
