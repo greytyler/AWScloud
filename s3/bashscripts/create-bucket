@@ -7,7 +7,6 @@
 
 
 # Script to create an S3 bucket using AWS CLI.
-# Usage: ./bucket.sh my-bucket-name
 
 # Check if a bucket name was provided
 if [ -z "$1" ]; then
