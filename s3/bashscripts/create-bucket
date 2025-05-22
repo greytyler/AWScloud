@@ -1,4 +1,5 @@
-!#usr/bin/env bash
+#!/usr/bin/env bash
+
 
 #configure file permissions on bash terminal
 #chmod u+x s3/bashscripts/*
@@ -20,6 +21,6 @@ BUCKET_NAME="$1"
 # Create the S3 bucket in the us-east-1 region
 aws s3api create-bucket \
     --bucket "$BUCKET_NAME" \
-    --create-bucket-configuration="LocationConstraint=us-east-1" \
+    --create-bucket-configuration="LocationConstraint=ca-central-1" \
     --query Location \
     --output text
