@@ -1,1 +1,6 @@
 !# /usr/bin/env bash
+#configure file permissions on bash terminal
+#chmod u+x s3/bashscripts/*
+#ls -la s3/bashscripts/
+
+
