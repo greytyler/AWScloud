@@ -1,4 +1,4 @@
-#!usr/bin/env bash
+!#usr/bin/env bash
 
 #configure file permissions on bash terminal
 #chmod u+x s3/bashscripts/*
@@ -6,7 +6,7 @@
 
 
 
-# Script to create an S3 bucket using AWS CLI.
+#Script to create an S3 bucket using AWS CLI.
 
 # Check if a bucket name was provided
 if [ -z "$1" ]; then
@@ -20,6 +20,6 @@ BUCKET_NAME="$1"
 # Create the S3 bucket in the us-east-1 region
 aws s3api create-bucket \
     --bucket "$BUCKET_NAME" \
-    --create-bucket-configuration LocationConstraint=us-east-1 \
+    --create-bucket-configuration="LocationConstraint=us-east-1" \
     --query Location \
     --output text
