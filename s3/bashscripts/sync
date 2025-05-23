@@ -1,1 +1,53 @@
-!# /usr/bin/env bash
+#!/usr/bin/env bash
+
+# Exit immediately if a command exits with a non-zero status
+set -e
+
+# Check if a bucket name was provided
+if [ -z "$1" ]; then
+    echo "❗ You must provide a bucket name."
+    echo "Usage: ./bucket.sh my-bucket-name"
+    exit 1
+fi 
+
+# Check for filename prefix
+if [ -z "$2" ]; then
+    echo "❗ You must provide a bucket name."
+    echo "Usage: ./bucket.sh my-bucket-name"
+    exit 1
+fi 
+
+BUCKET_NAME="$1"
+
+
+FILE_NAME_PREFIX="$2"
+
+
+# where we'll store files
+OUTPUT_DIR="/tmp/s3-bashscripts"
+
+# remove the output folder if it exists
+rm -rf $OUTPUT_DIR
+
+# lets create ouput folder
+mkdir -p $OUTPUT_DIR
+
+# generate a random number
+# to determine how many files to create
+NUM_FILES=$((RANDOM % 6 + 5))
+
+for ((i=1; i<=$NUM_FILES; i++)); do
+    # generate a random file name
+    FILE_NAME="$OUTPUT_DIR/${FILE_NAME_PREFIX}_$i.txt"
+    
+    # create the file with some content
+    echo "This is file $i" > $FILE_NAME
+
+    # generate random data and append to the file
+    dd if=/dev/urandom bs=1024 count=$((RANDOM % 1024 + 1)) of=$FILE_NAME oflag=append conv=notrunc 2>/dev/null
+
+done
+
+tree $OUTPUT_DIR
+
+aws s3 sync $OUTPUT_DIR s3://$BUCKET_NAME/files
