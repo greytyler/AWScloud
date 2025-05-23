@@ -5,3 +5,4 @@ output_dir="tmp/s3-bashscripts"
 
 # lets create ouput folder
 mkdir -p $OUTPUT_DIR
+
