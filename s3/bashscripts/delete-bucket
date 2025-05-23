@@ -22,6 +22,4 @@ BUCKET_NAME="$1"
 # Delete the S3 bucket in the us-east-1 region
 aws s3api delete-bucket \
     --bucket "$BUCKET_NAME" \
-    --dry-run \
-    --query Location \
     --output text
