@@ -22,3 +22,4 @@ BUCKET_NAME="$1"
 # Delete the S3 bucket in the us-east-1 region
 aws s3api list-objects-v2 \
     --bucket "$BUCKET_NAME" \
+    --output text
