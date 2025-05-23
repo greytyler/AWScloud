@@ -1,1 +1,24 @@
-!# /usr/bin/env bash
+#!/usr/bin/env bash
+
+echo "List objects in S3 bucket..."
+
+#configure file permissions on bash terminal
+#chmod u+x s3/bashscripts/*
+#ls -la s3/bashscripts/
+
+
+
+#Script to create an S3 bucket using AWS CLI.
+
+# Check if a bucket name was provided
+if [ -z "$1" ]; then
+    echo "❗ You must provide a bucket name."
+    echo "Usage: ./bucket.sh my-bucket-name"
+    exit 1
+fi 
+
+BUCKET_NAME="$1"
+
+# Delete the S3 bucket in the us-east-1 region
+aws s3api list-objects-v2 \
+    --bucket "$BUCKET_NAME" \
