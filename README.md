@@ -1,2 +1,2 @@
-#Aze, GCP AWS
+#Oracle, GCP AWS
 Codebase for AWS cloud development
