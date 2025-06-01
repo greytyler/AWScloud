@@ -1,2 +1,2 @@
-#Oracle, GCP AWS
+#Or, GCP AWS
 Codebase for AWS cloud development
