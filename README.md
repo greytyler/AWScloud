@@ -1,2 +1,2 @@
-#Or, GCP AWS
+#, GCP AWS
 Codebase for AWS cloud development
