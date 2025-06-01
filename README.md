@@ -1,2 +1,2 @@
-# GCP AWS
+# AWS
 Codebase for AWS cloud development
