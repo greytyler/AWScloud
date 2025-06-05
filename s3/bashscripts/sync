@@ -34,7 +34,7 @@ mkdir -p $OUTPUT_DIR
 
 # generate a random number
 # to determine how many files to create
-NUM_FILES=$((RANDOM % 6 + 2))
+NUM_FILES=$((RANDOM % 6 + 5))
 
 for ((i=1; i<=$NUM_FILES; i++)); do
     # generate a random file name
