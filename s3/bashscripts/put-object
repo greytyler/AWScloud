@@ -12,7 +12,7 @@ if [ -z "$2" ]; then
     exit 1
 fi
 BUCKET_NAME=$1
-FILENAME=$2
+FILENAME=$1
 
 OBJECT_KEY=$(basename "$FILENAME")
 
