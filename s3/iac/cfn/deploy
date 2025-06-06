@@ -2,11 +2,13 @@
 
 echo  "== deploy s3 bucket via cfn"
 
+STACK_NAME="s3-bucket"
+
 aws cloudformation deploy \
   --template-file s3/iac/cfn/s3-bucket.yaml \
-  --stack-name s3-bucket \
-  --capabilities CAPABILITY_NAMED_IAM \
-  --parameter-overrides \
-    BucketName="my-unique-bucket-name" \
-    Region="us-west-2" \
-    VersioningEnabled=true
+  --stack-name $STACK_namE \
+#   --capabilities CAPABILITY_NAMED_IAM \
+#   --parameter-overrides \
+#     BucketName="my-unique-bucket-name" \
+#     Region="us-west-2" \
+#     VersioningEnabled=true
