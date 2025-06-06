@@ -7,7 +7,7 @@ STACK_NAME="s3-bucket"
 aws cloudformation deploy \
   --template-file s3/iac/cfn/s3-bucket.yaml \
   --stack-name $STACK_namE \
-  --Region="ca-central2" \
+  --Region="ca-central-2" \
 #   --capabilities CAPABILITY_NAMED_IAM \
 #   --parameter-overrides \
 #     BucketName="my-unique-bucket-name" \
