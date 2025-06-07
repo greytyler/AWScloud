@@ -1,4 +1,4 @@
-AWSTemplateFormatVersion: "2010-09-09"
+AWSTemplateFormatVersion: "2010-09-10"
 Description: A simple s3 bucket
 Resources:
   S3Bucket:
