@@ -4,4 +4,4 @@ Resources:
   S3Bucket:
     # https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-s3-bucket.html
     Type: 'AWS::S3::Bucket'
-    # We  need supply a Bucket Name as AWS will generate a random name for us.
+    # We dont need supply a Bucket Name as AWS will generate a random name for us.
